@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
+import Header from '../components/Header'
 import Instructions from '../components/Instructions'
 import TakePictureButton from '../components/TakePictureButton'
 
@@ -7,7 +8,9 @@ export default class Main extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <View style={styles.header}></View>
+        <View style={styles.header}>
+          <Header />
+        </View>
         <View style={styles.instructions}>
           <Instructions />
         </View>
@@ -23,16 +26,18 @@ export default class Main extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'stretch'
   },
   instructions: {
-    flex: 1.589
+    flex: 1.589,
+    justifyContent: 'flex-end'
   },
   viewFinder: {
     flex: 2.188
   },
   takePictureButton: {
     flex: 3.778,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignSelf: 'center'
   }
 })
