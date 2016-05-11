@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
   },
+  "rnpm": {
+    "assets": ["assets/fonts"]
+  },
   "dependencies": {
     "react": "^0.14.8",
     "react-native": "^0.25.1"
